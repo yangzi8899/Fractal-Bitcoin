@@ -61,9 +61,9 @@ prepare_server() {
 
 # 下载并解压 Fractal Node
 download_and_extract() {
-    local url="https://github.com/fractal-bitcoin/fractald-release/releases/download/v0.1.7/fractald-0.1.7-x86_64-linux-gnu.tar.gz"
-    local filename="fractald-0.1.7-x86_64-linux-gnu.tar.gz"
-    local dirname="fractald-0.1.7-x86_64-linux-gnu"
+    local url="https://github.com/fractal-bitcoin/fractald-release/releases/download/v0.2.1/fractald-0.2.1-x86_64-linux-gnu.tar.gz"
+    local filename="fractald-0.2.1-x86_64-linux-gnu.tar.gz"
+    local dirname="fractald-0.2.1-x86_64-linux-gnu"
 
     check_file_exists "$filename"
     if [ $? -eq 0 ]; then
@@ -122,7 +122,7 @@ Description=Fractal Node
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=$HOME/fractald-0.1.7-x86_64-linux-gnu/bin/bitcoind -datadir=$HOME/fractald-0.1.7-x86_64-linux-gnu/data/ -maxtipage=504576000
+ExecStart=$HOME/fractald-0.2.1-x86_64-linux-gnu/bin/bitcoind -datadir=$HOME/fractald-0.2.1-x86_64-linux-gnu/data/ -maxtipage=504576000
 Restart=always
 RestartSec=5
 LimitNOFILE=infinity
