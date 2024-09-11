@@ -98,7 +98,7 @@ create_wallet() {
 
     log "${COLOR_BLUE}💼 正在创建新钱包...${COLOR_RESET}"
 
-    cd fractald-0.1.7-x86_64-linux-gnu/bin || handle_error "进入目录 bin 失败。"
+    cd fractald-0.2.1-x86_64-linux-gnu/bin || handle_error "进入目录 bin 失败。"
     ./bitcoin-wallet -wallet=wallet -legacy create || handle_error "创建钱包失败。"
 
     log "${COLOR_BLUE}🔑 正在导出钱包私钥...${COLOR_RESET}"
